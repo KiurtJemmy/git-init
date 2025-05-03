@@ -1,0 +1,72 @@
+--ejercicio 1
+public class Calculadora {
+
+    // Método suma de dos enteros
+    public int sumar(int a, int b) {
+        return a + b;
+    }
+
+    // Sobrecarga: suma de tres enteros
+    public int sumar(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    // Sobrecarga: suma de dos decimales
+    public double sumar(double a, double b) {
+        return a + b;
+    }
+
+    public static void main(String[] args) {
+        Calculadora calc = new Calculadora();
+        System.out.println("Suma 2 enteros: " + calc.sumar(5, 3));
+        System.out.println("Suma 3 enteros: " + calc.sumar(5, 3, 2));
+        System.out.println("Suma decimales: " + calc.sumar(5.5, 3.2));
+    }
+}
+
+
+
+--ejercicio 2
+
+import java.util.Scanner;
+
+public class Division {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        try {
+            System.out.print("Ingrese dividendo: ");
+            int a = scanner.nextInt();
+            System.out.print("Ingrese divisor: ");
+            int b = scanner.nextInt();
+            int resultado = a / b;
+            System.out.println("Resultado: " + resultado);
+        } catch (ArithmeticException e) {
+            System.out.println("Error: División entre cero no permitida.");
+        } catch (Exception e) {
+            System.out.println("Error de entrada.");
+        } finally {
+            scanner.close();
+        }
+    }
+}
+
+
+--ejerciciio3
+
+import java.util.ArrayList;
+
+public class ListaNombres {
+
+    public static void main(String[] args) {
+        ArrayList<String> nombres = new ArrayList<>();
+        nombres.add("Kiurt");
+        nombres.add("Andrea");
+        nombres.add("Lucas");
+
+        System.out.println("Lista de nombres:");
+        for (String nombre : nombres) {
+            System.out.println("- " + nombre);
+        }
+    }
+}
